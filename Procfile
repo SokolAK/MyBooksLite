@@ -1,0 +1,1 @@
+web: java -javaagent:lib/aspectjweaver-1.9.6.jar -jar -Dserver.port=$PORT target/mybooks-0.0.1-SNAPSHOT.jar
