@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pl.sokolak87</groupId>
-	<artifactId>mybooks</artifactId>
+	<artifactId>mybookslite</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mybooks</name>
+	<name>mybookslite</name>
 	<description>Book collection manager</description>
 
 	<properties>

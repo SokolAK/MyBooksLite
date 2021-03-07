@@ -1,9 +1,9 @@
 <aspectj>
     <aspects>
-        <aspect name="pl.sokolak.MyBooks.security.SecurityAspect"/>
+        <aspect name="pl.sokolak.MyBooksLite.security.SecurityAspect"/>
         <!-- weaver options="-verbose -showWeaveInfo" -->
         <weaver options="-warn:none -Xlint:ignore">
-            <include within="pl.sokolak.MyBooks..*"/>
+            <include within="pl.sokolak.MyBooksLite..*"/>
         </weaver>
     </aspects>
 </aspectj>
