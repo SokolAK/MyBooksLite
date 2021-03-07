@@ -14,7 +14,6 @@ import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.data.converter.StringToLongConverter;
 import com.vaadin.flow.data.value.ValueChangeMode;
-import pl.sokolak.MyBooksLite.model.author.AuthorDto;
 import pl.sokolak.MyBooksLite.model.author.AuthorService;
 import pl.sokolak.MyBooksLite.model.book.BookDto;
 

@@ -4,14 +4,16 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @Entity
 @Getter
 @Setter
 @ToString
 public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     @Column(columnDefinition = "varchar(255) default ''")
     private String author = "";
     @Column(columnDefinition = "varchar(255) default ''")

@@ -5,16 +5,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-import pl.sokolak.MyBooksLite.model.author.AuthorDto;
 import pl.sokolak.MyBooksLite.model.author.AuthorMapper;
 import pl.sokolak.MyBooksLite.model.author.AuthorService;
 import pl.sokolak.MyBooksLite.model.book.Book;
 import pl.sokolak.MyBooksLite.model.book.BookMapper;
 import pl.sokolak.MyBooksLite.model.book.BookService;
-import pl.sokolak.MyBooksLite.model.publisher.PublisherDto;
 import pl.sokolak.MyBooksLite.model.publisher.PublisherMapper;
 import pl.sokolak.MyBooksLite.model.publisher.PublisherService;
-import pl.sokolak.MyBooksLite.model.series.SeriesDto;
 import pl.sokolak.MyBooksLite.model.series.SeriesMapper;
 import pl.sokolak.MyBooksLite.model.series.SeriesService;
 

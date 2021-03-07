@@ -11,7 +11,6 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.data.domain.Pageable;
 import pl.sokolak.MyBooksLite.model.Dto;
-import pl.sokolak.MyBooksLite.model.author.AuthorDto;
 import pl.sokolak.MyBooksLite.model.author.AuthorService;
 import pl.sokolak.MyBooksLite.security.Secured;
 import pl.sokolak.MyBooksLite.ui.ExpandingTextField;

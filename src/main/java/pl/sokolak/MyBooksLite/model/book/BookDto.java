@@ -3,15 +3,11 @@ package pl.sokolak.MyBooksLite.model.book;
 import lombok.Getter;
 import lombok.Setter;
 import pl.sokolak.MyBooksLite.model.Dto;
-import pl.sokolak.MyBooksLite.model.author.AuthorDto;
-import pl.sokolak.MyBooksLite.model.publisher.PublisherDto;
-import pl.sokolak.MyBooksLite.model.series.SeriesDto;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Getter
 @Setter

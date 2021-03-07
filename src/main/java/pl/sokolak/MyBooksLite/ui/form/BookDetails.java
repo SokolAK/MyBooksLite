@@ -16,12 +16,9 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.data.binder.ValidationException;
-import pl.sokolak.MyBooksLite.model.author.AuthorDto;
 import pl.sokolak.MyBooksLite.model.author.AuthorService;
 import pl.sokolak.MyBooksLite.model.book.BookDto;
-import pl.sokolak.MyBooksLite.model.publisher.PublisherDto;
 import pl.sokolak.MyBooksLite.model.publisher.PublisherService;
-import pl.sokolak.MyBooksLite.model.series.SeriesDto;
 import pl.sokolak.MyBooksLite.model.series.SeriesService;
 import pl.sokolak.MyBooksLite.security.Secured;
 

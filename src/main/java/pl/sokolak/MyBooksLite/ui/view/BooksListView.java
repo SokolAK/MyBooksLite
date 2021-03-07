@@ -221,8 +221,8 @@ public class BooksListView extends VerticalLayout {
         columnList.put("id", false);
         columnList.put("title", true);
         columnList.put("subtitle", false);
-        columnList.put("authors", true);
-        columnList.put("publishers", true);
+        columnList.put("author", true);
+        columnList.put("publisher", true);
         columnList.put("year", true);
         columnList.put("city", false);
         columnList.put("edition", true);
