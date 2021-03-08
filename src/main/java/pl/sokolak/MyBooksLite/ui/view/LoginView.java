@@ -17,7 +17,7 @@ import static pl.sokolak.MyBooksLite.utils.TextFormatter.header;
 import static pl.sokolak.MyBooksLite.utils.TextFormatter.label;
 
 @Route("login")
-@PageTitle("Login | MyBooks")
+@PageTitle("Login | MyBooksLite")
 public class LoginView extends VerticalLayout implements BeforeEnterObserver {
     private final LoginForm login = new LoginForm();
 
@@ -53,7 +53,7 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
     private LoginI18n createI18n() {
         final LoginI18n i18n = LoginI18n.createDefault();
         i18n.setHeader(new LoginI18n.Header());
-        //i18n.getHeader().setTitle(header("loging"));
+        //i18n.getHeader().setTitle(header("logging"));
         i18n.getHeader().setDescription(header("LoginView.login"));
         i18n.getForm().setUsername(header("LoginView.username"));
         i18n.getForm().setTitle(header("LoginView.loging"));

@@ -10,16 +10,12 @@ import com.vaadin.flow.component.menubar.MenuBar;
 import com.vaadin.flow.component.menubar.MenuBarVariant;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
-import com.vaadin.flow.function.ValueProvider;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.data.domain.Pageable;
 import pl.sokolak.MyBooksLite.model.Dto;
-import pl.sokolak.MyBooksLite.model.author.AuthorService;
 import pl.sokolak.MyBooksLite.model.book.BookDto;
 import pl.sokolak.MyBooksLite.model.book.BookService;
-import pl.sokolak.MyBooksLite.model.publisher.PublisherService;
-import pl.sokolak.MyBooksLite.model.series.SeriesService;
 import pl.sokolak.MyBooksLite.security.Secured;
 import pl.sokolak.MyBooksLite.ui.ExpandingTextField;
 import pl.sokolak.MyBooksLite.ui.MainLayout;
@@ -30,19 +26,14 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import static pl.sokolak.MyBooksLite.model.author.AuthorDto.authorsSetToString;
-import static pl.sokolak.MyBooksLite.model.publisher.PublisherDto.publishersSetToString;
 import static pl.sokolak.MyBooksLite.security.OperationType.ADD;
 import static pl.sokolak.MyBooksLite.utils.TextFormatter.header;
 
 
 @Route(value = "", layout = MainLayout.class)
-@PageTitle("Books | MyBooks")
+@PageTitle("Books | MyBooksLite")
 public class BooksListView extends VerticalLayout {
     private final BookService bookService;
-    private final AuthorService authorService;
-    private final PublisherService publisherService;
-    private final SeriesService seriesService;
     private final Grid<BookDto> grid = new Grid<>(BookDto.class);
     private final ExpandingTextField txtFilter = new ExpandingTextField();
     private final MenuBar mnuColumns = new MenuBar();
@@ -59,11 +50,8 @@ public class BooksListView extends VerticalLayout {
     private NavigationController nc;
 
 
-    public BooksListView(BookService bookService, AuthorService authorService, PublisherService publisherService, SeriesService seriesService) {
+    public BooksListView(BookService bookService) {
         this.bookService = bookService;
-        this.authorService = authorService;
-        this.publisherService = publisherService;
-        this.seriesService = seriesService;
         addClassName("list-view");
         setSizeFull();
 
@@ -121,7 +109,7 @@ public class BooksListView extends VerticalLayout {
 
     //@Secured(EDIT)
     private void openBookDetails(BookDto bookDto) {
-        BookDetails bookDetails = new BookDetails(BookDto.copy(bookDto), authorService, publisherService, seriesService);
+        BookDetails bookDetails = new BookDetails(BookDto.copy(bookDto));
         //authorForm.setAuthor(e);
         //authorForm.addListener(AuthorForm.DeleteEvent.class, this::deleteAuthor);
         //authorForm.addListener(AuthorForm.SaveEvent.class, this::saveAuthor);
@@ -192,15 +180,7 @@ public class BooksListView extends VerticalLayout {
 
     private Grid.Column addGridColumn(String key) {
         Grid.Column<BookDto> column;
-        if (key.equals("authors")) {
-            ValueProvider<BookDto, String> valueProvider = b -> authorsSetToString(b.getAuthors(), shortNotation);
-            column = grid.addColumn(valueProvider).setComparator(valueProvider);
-        } else if (key.equals("publishers")) {
-            ValueProvider<BookDto, String> valueProvider = b -> publishersSetToString(b.getPublishers());
-            column = grid.addColumn(valueProvider).setComparator(valueProvider);
-        } else {
-            column = grid.addColumn(key);
-        }
+        column = grid.addColumn(key);
         column.setHeader(header(key));
         return column;
     }
@@ -236,8 +216,8 @@ public class BooksListView extends VerticalLayout {
         columnList.put("id", false);
         columnList.put("title", true);
         columnList.put("subtitle", true);
-        columnList.put("authors", true);
-        columnList.put("publishers", true);
+        columnList.put("author", true);
+        columnList.put("publisher", true);
         columnList.put("year", true);
         columnList.put("city", true);
         columnList.put("edition", true);
@@ -272,9 +252,4 @@ public class BooksListView extends VerticalLayout {
         MenuItem columns = mnuColumns.getItems().get(0);
         columns.getSubMenu().getItems().forEach(it -> it.setChecked(columnList.get(it.getId().get())));
     }
-
-/*    @Override
-    public String getPageTitle() {
-        return "Books | MyBooks";
-    }*/
 }

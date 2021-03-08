@@ -12,10 +12,10 @@ import static java.lang.System.setProperty;
 
 @SpringBootApplication(exclude = ErrorMvcAutoConfiguration.class)
 @PropertySource("classpath:application.yml")
-public class MyBooksApplication {
+public class MyBooksLiteApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MyBooksApplication.class, args);
+        SpringApplication.run(MyBooksLiteApplication.class, args);
         setProperty("vaadin.i18n.provider", VaadinI18NProvider.class.getName());
     }
 

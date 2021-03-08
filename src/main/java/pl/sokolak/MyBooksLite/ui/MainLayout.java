@@ -19,10 +19,7 @@ import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.theme.lumo.Lumo;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import pl.sokolak.MyBooksLite.ui.view.AuthorsListView;
 import pl.sokolak.MyBooksLite.ui.view.BooksListView;
-import pl.sokolak.MyBooksLite.ui.view.PublishersListView;
-import pl.sokolak.MyBooksLite.ui.view.SeriesListView;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -78,9 +75,6 @@ public class MainLayout extends AppLayout {
         List<RouterLink> routerLinks = new ArrayList<>();
 
         routerLinks.add(new RouterLink(header("MainLayout.books"), BooksListView.class));
-        routerLinks.add(new RouterLink(header("MainLayout.authors"), AuthorsListView.class));
-        routerLinks.add(new RouterLink(header("MainLayout.publishers"), PublishersListView.class));
-        routerLinks.add(new RouterLink(header("MainLayout.series"), SeriesListView.class));
 
         routerLinks.forEach(l -> l.setHighlightCondition(HighlightConditions.sameLocation()));
 
