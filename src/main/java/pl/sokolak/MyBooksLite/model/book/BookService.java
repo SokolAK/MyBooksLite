@@ -24,13 +24,13 @@ public class BookService {
     }
 
     public List<BookDto> findAll() {
-        return bookRepo.findAll().stream()
+        return bookRepo.findAllByOrderById().stream()
                 .map(bookMapper::toDto)
                 .collect(Collectors.toList());
     }
 
     public List<BookDto> findAll(Pageable pageable) {
-        return bookRepo.findAll(pageable).stream()
+        return bookRepo.findAllByOrderById(pageable).stream()
                 .map(bookMapper::toDto)
                 .collect(Collectors.toList());
     }

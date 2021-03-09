@@ -56,7 +56,7 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
         //i18n.getHeader().setTitle(header("logging"));
         i18n.getHeader().setDescription(header("LoginView.login"));
         i18n.getForm().setUsername(header("LoginView.username"));
-        i18n.getForm().setTitle(header("LoginView.loging"));
+        i18n.getForm().setTitle(header("LoginView.logging"));
         i18n.getForm().setSubmit(header("LoginView.login"));
         i18n.getForm().setPassword(header("LoginView.password"));
         i18n.getForm().setForgotPassword("");

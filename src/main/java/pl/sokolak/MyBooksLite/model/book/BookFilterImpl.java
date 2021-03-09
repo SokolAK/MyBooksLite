@@ -15,6 +15,8 @@ public class BookFilterImpl implements BookFilter {
     @PersistenceContext
     private EntityManager em;
 
+
+
     @Override
     public List<Book> findAllContainingPhrase(String phrase, Map<String, Boolean> columnList, Pageable pageable) {
         return findAllContainingPhraseSQL(phrase, columnList, pageable);

@@ -40,8 +40,8 @@ public class BooksListView extends VerticalLayout {
     private final TextField txtPage = new TextField();
     private final ComboBox<Integer> comboBox = new ComboBox<>();
     private final Map<String, Boolean> columnList = new LinkedHashMap<>();
-    private Button btnLeft = new Button();
-    private Button btnRight = new Button();
+    private final Button btnLeft = new Button();
+    private final Button btnRight = new Button();
     private Button btnShortNotation;
     private Button btnAddBook;
     private boolean shortNotation = false;
@@ -55,7 +55,9 @@ public class BooksListView extends VerticalLayout {
         addClassName("list-view");
         setSizeFull();
 
-        initFullColumnList();
+        //initFullColumnList();
+        initShortColumnList();
+        columnList.put("id",true);
         //configureChkShortNotation();
         configureGrid();
 

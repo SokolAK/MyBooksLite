@@ -29,7 +29,7 @@ dataLoader:
 spring:
   profiles: prod
   datasource:
-    url: jdbc:postgresql://localhost:5432/mybooks
+    url: jdbc:postgresql://localhost:5432/mybookslite
     username: ENC(+2z5W6bphNMgstRafjkgT4zJKiqnBsa1)
     password: ENC(IKjfPut1SBzf3wHKcPNt0x2ZAxtcBUtT)
     driverClassName: org.postgresql.Driver

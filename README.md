@@ -1,6 +1,7 @@
 # MyBooksLite
 A web application designed to manage private book collection.  <br />
-Check out the live demo on Heroku: https://my-books-sokolak-demo.herokuapp.com/
+This is a lite version which operates on a single table in a database. <br />
+Standard version: [MyBooks](https://github.com/SokolAK/MyBooks)
 
 
 ## Technologies & libraries
@@ -30,8 +31,8 @@ To take advantage of Jaspyt encryption capabilities, add the VM argument: <br />
 
 
 ## Screenshots
-<img src="./screenshots/3.png" width="400"> <img src="./screenshots/5.png" width="400">
-<img src="./screenshots/A1.jpg" width="200"> <img src="./screenshots/A2.jpg" width="200"> <img src="./screenshots/A3.jpg" width="200"> <img src="./screenshots/A6.jpg" width="200">
+<img src="./screenshots/3.png" width="400"> <br />
+<img src="./screenshots/A1.jpg" width="200"> <img src="./screenshots/A2.jpg" width="200"> <img src="./screenshots/A3.jpg" width="200">
 
 
 ## Status

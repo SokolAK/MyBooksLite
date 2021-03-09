@@ -56,7 +56,7 @@ public class NavigationController {
 
     public void configureCmbPage(ComboBox<Integer> comboBox) {
         comboBox.setItems(10, 20, 50);
-        comboBox.setValue(10);
+        comboBox.setValue(20);
         page.size = comboBox.getValue();
         comboBox.setWidth("8ch");
         comboBox.addValueChangeListener(e -> {
