@@ -47,9 +47,11 @@ spring:
     password: ${SPRING_DATASOURCE_PASSWORD}
     driverClassName: org.postgresql.Driver
     initialization-mode: never
+
   jpa:
     hibernate.ddl-auto: ${SPRING_JPA_HIBERNATE_DDL-AUTO}
     #database-platform: ${SPRING_JPA_DATABASE-PLATFORM}
+    properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
 
 ---
 
