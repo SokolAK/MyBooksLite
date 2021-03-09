@@ -25,7 +25,7 @@ public class PersistenceJPAConfig{
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() throws SQLException {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(getDataSource(getDataSourceMain(),getDataSourceTest()));
-        em.setPackagesToScan(new String[] { "pl.sokolak.MyBooks" });
+        em.setPackagesToScan(new String[] { "pl.sokolak.MyBooksLite" });
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);

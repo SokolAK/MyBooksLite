@@ -30,8 +30,8 @@ import static pl.sokolak.MyBooksLite.utils.TextFormatter.label;
 
 
 @PWA(
-        name = "MyBooks",
-        shortName = "MyBooks",
+        name = "MyBooks Lite",
+        shortName = "MyBooks Lite",
         offlinePath = "offline-page.html",
         offlineResources = {
                 "./styles/offline.css",
