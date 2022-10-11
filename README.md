@@ -1,6 +1,7 @@
 # MyBooksLite
 A web application designed to manage private book collection.  <br />
 This is a lite version which operates on a single table in a database. <br />
+Check out the live demo: http://mybookslite.alwaysdata.net <br />
 Standard version: [MyBooks](https://github.com/SokolAK/MyBooks)
 
 
